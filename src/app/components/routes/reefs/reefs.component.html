@@ -1,1 +1,14 @@
-<p>reefs works!</p>
+<div class="reef-container">
+  <div class="reef-main-container">
+    <img src="assets/images/reef.jpg">
+    <p>
+      Over 50 percent of the world's coral reefs have died in the last 30 years
+      and up to 90 percent may die within the next century—very few pristine
+      coral reefs still exist.
+    </p>
+  </div>
+
+  <div class="reef-info-container">
+    <p *ngFor="let info of infoText">{{info}}</p>
+  </div>
+</div>

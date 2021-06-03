@@ -10,6 +10,18 @@ import { IntroComponent } from './components/index/intro/intro.component';
 import { InfoSectionComponent } from './components/index/info-section/info-section.component';
 import { FactsSectionComponent } from './components/index/facts-section/facts-section.component';
 import { FooterComponent } from './components/index/footer/footer.component';
+import { RoutesComponent } from './components/routes/routes.component';
+import { PollutionComponent } from './components/routes/pollution/pollution.component';
+import { FishComponent } from './components/routes/fish/fish.component';
+import { ReefsComponent } from './components/routes/reefs/reefs.component';
+import { RouterModule } from '@angular/router';
+
+const routes = [
+  {path: '', component: IndexComponent},
+  {path: 'pollution', component: PollutionComponent},
+  {path: 'fish', component: FishComponent},
+  {path: 'reefs', component: ReefsComponent},
+]
 
 @NgModule({
   declarations: [
@@ -21,11 +33,19 @@ import { FooterComponent } from './components/index/footer/footer.component';
     InfoSectionComponent,
     FactsSectionComponent,
     FooterComponent,
+    RoutesComponent,
+    PollutionComponent,
+    FishComponent,
+    ReefsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+
   ],
+  exports: [RouterModule],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

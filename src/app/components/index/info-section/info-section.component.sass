@@ -1,16 +1,21 @@
 .info-section-container
-  margin-top: 10rem
-  height: 60rem
+  padding-top: 10rem
+  padding-bottom: 10rem
+  height: 100rem
   background: #e0e0e0
   overflow: none
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  position: relative
 
 .info-container
   display: flex
   justify-content: center
   align-items: center
-  margin-top: 10rem
-  margin-bottom: 10rem
-  overflow: none
+  margin-top: 8rem
+  margin-bottom: 8rem
 .info-circle
   margin-right: 5rem
   display: flex
@@ -39,13 +44,33 @@
   border: none
   font-size: 2rem
   color: #fff
-
+  &:hover
+    background: #5f5f5f
+  &:active
+    background: #3c3c3c
+    
 .cig-image, .straws-image, .toxicBig-image, .reef-image
   height: 30rem
   width: 30rem
   position: absolute
-
 .cig-image
+  height: 45rem
+  width: 13rem
+  left: 20rem
+  top: 10rem
 .straws-image
+  height: 40rem
+  width: 30rem
+  left: -5rem
+  bottom: 5rem
 .toxicBig-image
+  height: 50rem
+  width: 25rem
+  right: -2rem
+  top: 20rem
+  transform: rotate(-20deg)
 .reef-image
+  height: 35rem
+  width: 30rem
+  right: 10rem
+  bottom: -3rem

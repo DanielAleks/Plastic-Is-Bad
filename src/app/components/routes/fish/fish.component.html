@@ -1,1 +1,19 @@
-<p>fish works!</p>
+<div class="fish-container">
+  <div class="fish-main-image-container">
+    <img src="assets/images/seaBird.jpg" alt="" />
+    <p class="fish-header-text">The Best Fish</p>
+    <p class="fish-description-text">
+      Lorem Ipsum is simply text of the printing and typesetting industry. Lorem
+      Ipsum has been the industry's standard dummy text ever since the 1500s,
+      whe
+    </p>
+  </div>
+
+  <div class="fish-gallery-container">
+    <img
+      *ngFor="let image of images"
+      src="{{ 'assets/images/' + image + '.jpg' }}"
+      alt=""
+    />
+  </div>
+</div>
