@@ -1,16 +1,19 @@
 .fish-container
   display: grid
+  justify-content: center
+  align-items: center
   grid-template-columns: 1.5fr 1fr
-  margin-top: 10rem
 
 .fish-main-image-container
   display: flex
   flex-direction: column
   justify-content: center
-  align-items: center 
+  align-items: center
   img
-    height: 30rem
-    width: 40rem
+    border: 1px solid #8a8a8a
+    border-radius: 5px
+    height: 60rem
+    width: 80rem
     object-fit: cover
 .fish-header-text
   font-size: 2rem
@@ -19,10 +22,24 @@
   font-size: 1.8rem
 
 .fish-gallery-container
+  margin-top: 10rem
   display: grid
-  grid-gap: 5rem
+  grid-gap: 2rem
+  justify-content: center
+  align-items: center
+.fish-image-container
+  width: 35rem
+  height: 15rem
+  overflow: hidden
+  border-radius: 5px
+  border: 1px solid #8a8a8a
   img
-    height: 40rem
-    width: 40rem
-    border-radius: 5px
+    height: 100%
+    width: 100%
     object-fit: cover
+    transition: transform 1s
+    cursor: pointer
+    &:hover
+      transform: scale(1.1)
+    &:active
+      transform: scale(1.2)

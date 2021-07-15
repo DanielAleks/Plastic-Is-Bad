@@ -10,10 +10,8 @@
   </div>
 
   <div class="fish-gallery-container">
-    <img
-      *ngFor="let image of images"
-      src="{{ 'assets/images/' + image + '.jpg' }}"
-      alt=""
-    />
+    <div *ngFor="let image of images" class="fish-image-container">
+      <img src="{{ 'assets/images/' + image + '.jpg' }}" />
+    </div>
   </div>
 </div>

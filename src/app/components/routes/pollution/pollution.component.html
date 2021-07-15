@@ -4,32 +4,8 @@
     <hr />
   </div>
   <div class="pollution-image-container">
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'cigerettes' + '.jpg' }}" />
-    </div>
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'seaLion' + '.jpg' }}" />
-    </div>
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'seaLion' + '.jpg' }}" />
-    </div>
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'bagjpg' + '.jpg' }}" />
-    </div>
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'lid' + '.jpg' }}" />
-    </div>
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'spoons' + '.jpg' }}" />
-    </div>
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'straws' + '.jpg' }}" />
-    </div>
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'glassBottle' + '.jpg' }}" />
-    </div>
-    <div class="inner-image-container">
-      <img src="{{ 'assets/images/' + 'cans' + '.jpg' }}" />
+    <div *ngFor="let image of images" class="inner-image-container">
+      <img src="{{ 'assets/images/' + image + '.jpg' }}" />
     </div>
   </div>
 </div>

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PollutionComponent implements OnInit {
 
+images = [
+  'cigerettes', 'wrappers', 'bottle', 'bagjpg', 'lid', 'spoons', 'straws', 'glassBottle', 'cans'
+]
+
   constructor() {}
 
   ngOnInit(): void {}

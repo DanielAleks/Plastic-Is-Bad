@@ -17,7 +17,6 @@
   position: absolute
   background: #000
 
-
 .header-info-container
   position: absolute
   width: 70rem
@@ -51,19 +50,49 @@
     background: #e4e4e4
     border-radius: none
 
+@media (max-width: 700px)
+  .header-logo-text
+    font-size: 6rem
+  .header-intro-text
+    font-size: 1.5rem
+  .header-button
+    font-size: 2rem
+    height: 5rem
+    width: 22rem
+@media (max-width: 560px)
+  .header-intro-text
+    width: 55%
+    text-align: center
+
 .header-side-text
   font-family: Farro
   position: absolute
   font-size: 18rem
+  width: 165rem
   color: black
   opacity: .3
   top: 13rem
-  right: -5rem
+  right: -10rem
+  @media (max-width: 1700px)
+    font-size: 14rem
+    width: 130rem
+  @media (max-width: 1250px)
+    font-size: 11rem
+    width: 105rem
+  @media (max-width: 1000px)
+    font-size: 9rem
+    width: 90rem
+  @media (max-width: 850px)
+    display: none
+    font-size: 7rem
+    width: 75rem
+  @media (max-width: 750px)
+    width: 80%
+    right: 0px
 
 .bag-image, .rings-image, .bottle-container
   position: absolute
-  height: 30rem
-  width: 30rem
+
 .bag-image
   height: 50rem
   width: 37rem
@@ -77,13 +106,13 @@
   top: 15rem
   transform: rotate(100deg)
 .bottle-container
+  width: 20rem
+  height: 55rem
   right: 0px
   bottom: 0px
   display: flex
   justify-content: center
   object-fit: cover
-  width: 20rem
-  height: 55rem
   transform: rotate(-20deg)
 .bottle-image
   height: 100%
@@ -94,9 +123,39 @@
   text-align: center
   color: #ededed
   font-family: nunito-reg
-  line-height: 3rem 
+  line-height: 3rem
   position: absolute
   margin: 5%
   width: 90%
   font-size: 1.8rem
-  
+
+@media (max-width: 1700px)
+  .bottle-container
+    width: 15rem
+    height: 40rem
+  .rings-image
+    height: 25rem
+    width: 33rem
+  .bag-image
+    height: 40rem
+    width: 27rem
+
+@media (max-width: 1250px)
+  .bottle-container
+    width: 13rem
+    height: 35rem
+  .bottle-text
+    bottom: 35%
+  .rings-image
+    left: -5rem
+    height: 22rem
+    width: 25rem
+  .bag-image
+    height: 30rem
+    width: 23rem
+    bottom: -2rem
+
+@media (max-width: 900px)
+  .bag-image, .rings-image, .bottle-container
+    display: none
+  // .header-side-text
