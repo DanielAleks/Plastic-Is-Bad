@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.sass']
 })
 export class NavbarComponent implements OnInit {
-
+  
+  navOpen = false
   constructor() { }
+
 
   ngOnInit(): void {
   }

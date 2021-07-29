@@ -1,20 +1,13 @@
 <nav class="nav-container">
   <div class="nav-colored-container"></div>
-  <div class="nav-routes">
+  <button class="nav-mobile" (click)="navOpen = !navOpen">x</button>
+  <div class="nav-routes" [style.display]="navOpen ? 'flex' : 'none'">
     <button routerLink="/" routerLinkActive="active">
       Home
     </button>
-    <button routerLink="pollution" routerLinkActive="active">
-      Pollution
-    </button>
-    <button>
-      Facts
-    </button>
-    <button routerLink="fish" routerLinkActive="active">
-      Fish
-    </button>
-    <button routerLink="reefs" routerLinkActive="active">
-      Reefs
-    </button>
+    <button routerLink="pollution" routerLinkActive="active">Pollution</button>
+    <button>Facts</button>
+    <button routerLink="fish" routerLinkActive="active">Fish</button>
+    <button routerLink="reefs" routerLinkActive="active">Reefs</button>
   </div>
 </nav>

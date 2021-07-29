@@ -2,7 +2,7 @@
   <div
     *ngFor="let information of information; let id = index"
     class="info-container"
-    [ngStyle]="{ flexDirection: id === 1 ? 'row-reverse' : 'row' }"
+    [ngStyle]="{ flexDirection: screenWidth < 900 ? 'column' : id === 1 ? 'row-reverse' : 'row' }"
   >
     <div class="info-circle">
       <img
@@ -13,9 +13,7 @@
 
     <div class="info-information">
       <p class="info-text">
-        Lorem Ipsum is simply text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the
-        1500s, whe
+        {{information.text}}
       </p>
       <button class="info-button">View More</button>
     </div>

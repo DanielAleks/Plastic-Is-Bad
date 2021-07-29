@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-info-section',
@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class InfoSectionComponent implements OnInit {
   information = [
     {
-      text: 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, whe',
+      text: '30% of fish have some degree of plastic that we consume as humans.',
       image: 'fish',
     },
     {
-      text: 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, whe',
+      text: 'More than 10% of reefs destroyed by plastic trash.',
       image: 'reefSmall',
     },
     {
-      text: 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, whe',
+      text: 'Toxic waste in the oceans cause problems in the entiretly of the ocean as well as our clouds.',
       image: 'toxicSmall',
     },
   ];
@@ -28,7 +28,25 @@ export class InfoSectionComponent implements OnInit {
     { image: 'reef', style: 'reef-image' },
   ];
 
-  constructor() {}
+  public screenWidth: any;
 
-  ngOnInit(): void {}
+  constructor() {
+    function infoFlex(id) {
+      if (this.screenWidth > 900) {
+        'column'
+      } else if (id === 1) {
+        'row-reverse'
+      } else 'row'
+
+    }
+  }
+
+  ngOnInit(): void {
+    this.screenWidth = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.screenWidth = window.innerWidth;
+  }
 }

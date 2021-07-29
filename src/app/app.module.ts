@@ -15,6 +15,7 @@ import { PollutionComponent } from './components/routes/pollution/pollution.comp
 import { FishComponent } from './components/routes/fish/fish.component';
 import { ReefsComponent } from './components/routes/reefs/reefs.component';
 import { RouterModule } from '@angular/router';
+// import {MatIconModule} from '@angular/material/icon';
 
 const routes = [
   {path: '', component: IndexComponent},
@@ -25,6 +26,7 @@ const routes = [
 
 @NgModule({
   declarations: [
+    // MatIconModule,
     AppComponent,
     IndexComponent,
     NavbarComponent,
